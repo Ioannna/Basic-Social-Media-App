@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import mountainsImg from './../assets/images/mountains.jpg'
+import FindPeople from '../user/FindPeople'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -45,6 +46,7 @@ export default function Home(){
               Welcome to the MERN Skeleton home page.
             </Typography>
           </CardContent>
+          <FindPeople />
         </Card>
     )
 }
