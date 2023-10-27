@@ -1,4 +1,5 @@
-#This is a project that I learn how to do by following the instructions from 
+#
+This is a project that I learn how to do by following the instructions from 
 the book Full-Stack-React-Projects-Second-Edition by Shama Hoque.
 At this moment this project is a work in progress but below it can be observed how it will look like.
 
