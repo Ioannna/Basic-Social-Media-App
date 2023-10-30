@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import mountainsImg from './../assets/images/mountains.jpg'
-//import FindPeople from '../user/FindPeople'
+// import FindPeople from '../user/FindPeople'
 
 const useStyles = makeStyles(theme => ({
   card: {
