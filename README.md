@@ -1,10 +1,17 @@
-# MERN Skeleton
+#
+This is a project that I learn how to do by following the instructions from 
+the book Full-Stack-React-Projects-Second-Edition by Shama Hoque.
+At this moment this project is a work in progress but below it can be observed how it will look like. 
+The description presented below belongs to Full-Stack-React-Projects-Second-Edition.
 
-A skeleton application with basic user CRUD and auth features - developed using React, Node, Express and MongoDB.
 
-![MERN Skeleton](https://mernbook.s3.amazonaws.com/git+/skeleton2.png "MERN Skeleton")
+# MERN Social
 
-### [Live Demo](http://skeleton2.mernbook.com/ "MERN Skeleton")
+A simple social media application with users, posts, likes and comments - developed using React, Node, Express and MongoDB. 
+
+![MERN Social](https://s3.amazonaws.com/mernbook/git+/social.png "MERN Social")
+
+### [Live Demo](http://social2.mernbook.com/ "MERN Social")
 
 #### What you need to run this code
 1. Node (13.12.0)
@@ -12,10 +19,11 @@ A skeleton application with basic user CRUD and auth features - developed using 
 3. MongoDB (4.2.0)
 
 ####  How to run this code
-1. Make sure MongoDB is running on your system
+1. Make sure MongoDB is running on your system 
 2. Clone this repository
 3. Open command line in the cloned folder,
    - To install dependencies, run ```  npm install  ``` or ``` yarn ```
    - To run the application for development, run ```  npm run development  ``` or ``` yarn development ```
 4. Open [localhost:3000](http://localhost:3000/) in the browser
+---- 
 ----
