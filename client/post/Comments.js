@@ -40,15 +40,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Comments (props) {
   const classes = useStyles()
-
   const [text, setText] = useState('')
-  
   const jwt = auth.isAuthenticated()
-
   const handleChange = event => {
     setText(event.target.value)
   }
-
   const addComment = (event) => {
     if(event.keyCode == 13 && event.target.value){
       event.preventDefault()

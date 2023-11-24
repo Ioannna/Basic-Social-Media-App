@@ -65,11 +65,9 @@ export default function NewPost (props){
     user: {}
   })
   const jwt = auth.isAuthenticated()
-
   useEffect(() => {
     setValues({...values, user: auth.isAuthenticated().user})
   }, [])
-
   const clickPost = () => {
     let postData = new FormData()
     postData.append('text', values.text)
@@ -87,16 +85,13 @@ export default function NewPost (props){
       }
     })
   }
-
   const handleChange = name => event => {
     const value = name === 'photo'
       ? event.target.files[0]
       : event.target.value
     setValues({...values, [name]: value })
   }
-
   const photoURL = values.user._id ?'/api/users/photo/'+ values.user._id : '/api/users/defaultphoto'
-  
     return (<div className={classes.root}>
       <Card className={classes.card}>
       <CardHeader
@@ -139,5 +134,4 @@ export default function NewPost (props){
 NewPost.propTypes = {
   addUpdate: PropTypes.func.isRequired
 }
-
 

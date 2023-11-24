@@ -52,7 +52,6 @@ const useStyles = makeStyles(theme => ({
 export default function Post (props){
   const classes = useStyles()
   const jwt = auth.isAuthenticated()
-
   const checkLike = (likes) => {
     let match = likes.indexOf(jwt.user._id) !== -1
     return match

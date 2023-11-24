@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import mountainsImg from './../assets/images/mountains.jpg'
+import leadImg from './../assets/images/lead.jpg'
 import Grid from '@material-ui/core/Grid'
 import auth from './../auth/auth-helper'
 import FindPeople from './../user/FindPeople'
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30,
   },
   card: {
-    maxWidth: 600,
+    maxWidth: 800,
     margin: 'auto',
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5)
@@ -55,15 +55,15 @@ export default function Home({history}){
 
     return (
       <div className={classes.root}>
-        { !defaultPage && 
+        { !defaultPage &&
           <Grid container spacing={8}>
             <Grid item xs={12}>
               <Card className={classes.card}>
                 <Typography variant="h6" className={classes.title}>
                   Home Page
                 </Typography>
-                <CardMedia className={classes.media} image={mountainsImg} title="Beautiful Mountains"/>
-                <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@anik3t"  target="_blank" rel="noopener noreferrer">Aniket Deole</a> on Unsplash</Typography>
+                <CardMedia className={classes.media} image={leadImg} title="Man with a compass"/>
+                {/* <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@anik3t"  target="_blank" rel="noopener noreferrer">Aniket Deole</a> on Unsplash</Typography> */}
                 <CardContent>
                   <Typography type="body1" component="p">
                     Welcome to the MERN Social home page. 
@@ -76,7 +76,7 @@ export default function Home({history}){
         {defaultPage &&
           <Grid container spacing={8}>
             <Grid item xs={8} sm={7}>
-              {/* <Newsfeed /> */}
+              <Newsfeed/>
             </Grid> 
             <Grid item xs={6} sm={5}>
               <FindPeople/>

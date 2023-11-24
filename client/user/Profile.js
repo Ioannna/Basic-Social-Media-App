@@ -16,10 +16,8 @@ import auth from './../auth/auth-helper'
 import {read} from './api-user.js'
 import {Redirect, Link} from 'react-router-dom'
 import FollowProfileButton from './../user/FollowProfileButton'
-import { SettingsInputCompositeSharp } from '@material-ui/icons'
-//import ProfileTabs from './../user/ProfileTabs'
+import ProfileTabs from './../user/ProfileTabs'
 import {listByUser} from './../post/api-post.js'
-import { update } from 'lodash'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
@@ -90,9 +88,6 @@ export default function Profile({ match }) {
       }
     })
   }
-
- 
-
   const loadPosts = (user) => {
     listByUser({
       userId: user
@@ -106,8 +101,6 @@ export default function Profile({ match }) {
       }
     })
   }
-
-
   const removePost = (post) => {
     const updatedPosts = posts
     const index = updatedPosts.indexOf(post)
@@ -118,7 +111,6 @@ export default function Profile({ match }) {
     const photoUrl = values.user._id
               ? `/api/users/photo/${values.user._id}?${new Date().getTime()}`
               : '/api/users/defaultphoto'
-              
     if (values.redirectToSignin) {
       return <Redirect to='/signin'/>
     }
@@ -151,7 +143,9 @@ export default function Profile({ match }) {
               new Date(values.user.created)).toDateString()}/>
           </ListItem>
         </List>
-        {/* <ProfileTabs user={values.user} posts={posts} removePostUpdate={removePost}/> */}
+        <ProfileTabs user={values.user} posts={posts} removePostUpdate={removePost}/>
       </Paper>
     )
 }
+
+
