@@ -62,11 +62,11 @@ export default function Home({history}){
                 <Typography variant="h6" className={classes.title}>
                   Home Page
                 </Typography>
-                <CardMedia className={classes.media} image={leadImg} title="Man with a compass"/>
+                <CardMedia className={classes.media} image={leadImg} title="A man with a compass"/>
                 {/* <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@anik3t"  target="_blank" rel="noopener noreferrer">Aniket Deole</a> on Unsplash</Typography> */}
                 <CardContent>
                   <Typography type="body1" component="p">
-                    Welcome to the MERN Social home page. 
+                    Welcome to the HERE home page. 
                   </Typography>
                 </CardContent>
               </Card>

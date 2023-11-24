@@ -131,7 +131,6 @@ const comment = async (req, res) => {
     })
   }
 }
-
 const uncomment = async (req, res) => {
   let comment = req.body.comment
   try{
