@@ -16,8 +16,8 @@ import auth from './../auth/auth-helper'
 import {read} from './api-user.js'
 import {Redirect, Link} from 'react-router-dom'
 import FollowProfileButton from './../user/FollowProfileButton'
-//import ProfileTabs from './../user/ProfileTabs'
-//import {listByUser} from './../post/api-post.js'
+import ProfileTabs from './../user/ProfileTabs'
+import {listByUser} from './../post/api-post.js'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
@@ -45,7 +45,7 @@ export default function Profile({ match }) {
     redirectToSignin: false,
     following: false
   })
-  //const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])
   const jwt = auth.isAuthenticated()
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Profile({ match }) {
       } else {
         let following = checkFollow(data)
         setValues({...values, user: data, following: following})
-        //loadPosts(data._id)
+        loadPosts(data._id)
       }
     })
     return function cleanup(){
@@ -88,30 +88,29 @@ export default function Profile({ match }) {
       }
     })
   }
-  // const loadPosts = (user) => {
-  //   listByUser({
-  //     userId: user
-  //   }, {
-  //     t: jwt.token
-  //   }).then((data) => {
-  //     if (data.error) {
-  //       console.log(data.error)
-  //     } else {
-  //       setPosts(data)
-  //     }
-  //   })
-  // }
-  // const removePost = (post) => {
-  //   const updatedPosts = posts
-  //   const index = updatedPosts.indexOf(post)
-  //   updatedPosts.splice(index, 1)
-  //   setPosts(updatedPosts)
-  // }
+  const loadPosts = (user) => {
+    listByUser({
+      userId: user
+    }, {
+      t: jwt.token
+    }).then((data) => {
+      if (data.error) {
+        console.log(data.error)
+      } else {
+        setPosts(data)
+      }
+    })
+  }
+  const removePost = (post) => {
+    const updatedPosts = posts
+    const index = updatedPosts.indexOf(post)
+    updatedPosts.splice(index, 1)
+    setPosts(updatedPosts)
+  }
 
     const photoUrl = values.user._id
               ? `/api/users/photo/${values.user._id}?${new Date().getTime()}`
               : '/api/users/defaultphoto'
-              
     if (values.redirectToSignin) {
       return <Redirect to='/signin'/>
     }
@@ -144,7 +143,9 @@ export default function Profile({ match }) {
               new Date(values.user.created)).toDateString()}/>
           </ListItem>
         </List>
-        {/* <ProfileTabs user={values.user} posts={posts} removePostUpdate={removePost}/> */}
+        <ProfileTabs user={values.user} posts={posts} removePostUpdate={removePost}/>
       </Paper>
     )
 }
+
+
