@@ -1,17 +1,7 @@
-#
-This is a project that I learn how to do by following the instructions from 
-the book Full-Stack-React-Projects-Second-Edition by Shama Hoque.
-At this moment this project is a work in progress but below it can be observed how it will look like. 
-The description presented below belongs to Full-Stack-React-Projects-Second-Edition.
 
+# HERE - Social media app
 
-# MERN Social
-
-A simple social media application with users, posts, likes and comments - developed using React, Node, Express and MongoDB. 
-
-![MERN Social](https://s3.amazonaws.com/mernbook/git+/social.png "MERN Social")
-
-### [Live Demo](http://social2.mernbook.com/ "MERN Social")
+HERE is a basic social media application with users, posts, likes and comments - developed using React, Node, Express and MongoDB. 
 
 #### What you need to run this code
 1. Node (13.12.0)
