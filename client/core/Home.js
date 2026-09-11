@@ -60,13 +60,13 @@ export default function Home({history}){
             <Grid item xs={12}>
               <Card className={classes.card}>
                 <Typography variant="h6" className={classes.title}>
-                  Home Page
+                  HERE
                 </Typography>
                 <CardMedia className={classes.media} image={leadImg} title="A man with a compass"/>
                 {/* <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@anik3t"  target="_blank" rel="noopener noreferrer">Aniket Deole</a> on Unsplash</Typography> */}
                 <CardContent>
                   <Typography type="body1" component="p">
-                    Welcome to the HERE home page. 
+                   It's nice to have you HERE! Please Sign In to explore the app! :) 
                   </Typography>
                 </CardContent>
               </Card>
