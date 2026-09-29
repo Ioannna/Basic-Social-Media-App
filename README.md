@@ -17,7 +17,7 @@ HERE is a basic social media application with users, posts, likes and comments -
 ![Profile](screenshots/Profile.png)
 
 ### EditProfile
-![EditProfile](screenshots/EditProfile.png)
+![EditProfile](screenshots/Edit Profile.png)
 
 #### What you need to run this code
 1. Node (13.12.0)
