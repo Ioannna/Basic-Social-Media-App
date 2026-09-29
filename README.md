@@ -1,7 +1,23 @@
-
+![](..%5CHome.png)
 # HERE - Social media app
 
 HERE is a basic social media application with users, posts, likes and comments - developed using React, Node, Express and MongoDB. 
+
+## Screenshots
+### Home
+![Home](screenshots/Home.png)
+
+### SignUp
+![SignUp](screenshots/SignUp.png)
+
+### Newsfeed
+![Newsfeed](screenshots/Newsfeed.png)
+
+### Profile
+![Profile](screenshots/Profile.png)
+
+### EditProfile
+![EditProfile](screenshots/EditProfile.png)
 
 #### What you need to run this code
 1. Node (13.12.0)
